@@ -24,10 +24,13 @@ class SplashScreenState extends State {
   }
 
   @override
-  Widget build(BuildContext bc) {
-    return Container(
-      width: 200,
-      child: Image.asset("lib/assets/images/gharsewa_logo.png"),
+  Widget build(BuildContext bc)
+  {
+    return Center(
+      child:Container(
+        width: 250,
+        child:Image.asset("lib/assets/images/gharsewa_logo.png"),
+      ),
     );
   }
 }
