@@ -1,22 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:gharsewa/widgets/GSTextField.dart';
 
-class LoginScreen extends StatefulWidget
-{
+import '../widgets/GSAppBar.dart';
+import '../widgets/GSButton.dart';
+import '../widgets/GSTextField.dart';
+
+import '../themes/colors.dart';
+
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
-  State createState()
-    {
-      return LoginState();
-    }
+  State createState() {
+    return LoginState();
+  }
 }
 
-class LoginState extends State
-  {
-    @override
-    Widget build(BuildContext bc)
-      {
-        return Center(
-          child: Text("LOGIN SCREEN"),
-        );
-      }
-
+class LoginState extends State<LoginScreen> {
+  @override
+  Widget build(BuildContext bc) {
+    return Scaffold(
+      backgroundColor: GSColors().offwhite,
+      body: Center(
+        child: Column(children: [
+          Image.asset("lib/assets/images/gharsewa_logo.png",width:200),
+          GSTextField(placeholder: "Email"),
+          GSTextField(placeholder: "Password",masking:true),
+          GSButton(buttonText:"Login", buttonColor:GSColors().yellow, onClick: () {print("Login Clicked");}),
+          ]
+        ),
+      ),
+    );
   }
+}
