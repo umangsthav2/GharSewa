@@ -24,7 +24,7 @@ class ListTileState extends State<GSListTile> {
         ),
         title: Text(
           "${widget.name}",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
         subtitle: Text("${widget.desc}"),
       ),
