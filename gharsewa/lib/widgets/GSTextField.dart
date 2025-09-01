@@ -4,8 +4,9 @@ import 'package:gharsewa/themes/colors.dart';
 class GSTextField extends StatefulWidget
   {
     final String? placeholder;
+    final TextEditingController? controller;
     bool masking;
-    GSTextField({super.key, this.placeholder, this.masking=false});
+    GSTextField({super.key, this.placeholder, this.controller, this.masking=false});
 
     @override
     State<GSTextField> createState() => GSTextFieldState();

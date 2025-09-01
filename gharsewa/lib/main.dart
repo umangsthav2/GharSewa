@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 import 'package:gharsewa/screens/LoginScreen.dart';
 import 'package:gharsewa/screens/SplashScreen.dart';
+import 'package:gharsewa/screens/TestScreen.dart';
+
+import 'package:gharsewa/themes/colors.dart';
+
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -11,20 +14,17 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext bc) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:Scaffold(
-        body:SplashScreen(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: GSColors().green,
+        ),
+        useMaterial3: true,
       ),
-
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(body: Testscreen()),
     );
   }
 }
-
-
-
-
-
-
 
 void main() {
   runApp(MainApp());
