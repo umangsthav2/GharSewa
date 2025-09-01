@@ -20,6 +20,7 @@ class LoginState extends State<LoginScreen> {
   @override
   Widget build(BuildContext bc) {
     return Scaffold(
+      appBar: GSAppBar(),
       backgroundColor: GSColors().offwhite,
       body: Center(
         child: Column(children: [
