@@ -28,7 +28,7 @@ class LoginState extends State<LoginScreen> {
           GSTextField(placeholder: "Email"),
           GSTextField(placeholder: "Password",masking:true),
           GSButton(buttonText:"Login", buttonColor:GSColors().yellow, onClick: () {print("Login Clicked");}),
-          ]
+          ],
         ),
       ),
     );
