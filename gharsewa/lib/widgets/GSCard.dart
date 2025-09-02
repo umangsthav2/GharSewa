@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gharsewa/screens/LoginScreen.dart';
 
 import 'package:gharsewa/widgets/GSListTile.dart';
+import 'package:gharsewa/widgets/GSUser.dart';
 
 class GSCard extends StatefulWidget {
   final String? title;
@@ -8,8 +10,9 @@ class GSCard extends StatefulWidget {
   final String? location;
   final String? img;
   final int? id;
+  final VoidCallback? viewPost;
 
-  GSCard({super.key, this.id, this.title, this.desc, this.location, this.img});
+  const GSCard({super.key, this.id, this.title, this.desc, this.location, this.img, this.viewPost});
 
   @override
   State<GSCard> createState() {
@@ -36,7 +39,14 @@ class CardState extends State<GSCard> {
               name:"KP Sharma Oli",
               desc:"Chyasal, Kathmandu",
               img:"lib/assets/images/user1.jpg",
-              onClick: () {debugPrint("Hello");},
+              onClick: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GSUser() 
+                  )
+                );
+              },
             ),
                 Container(
                   width: double.infinity,
@@ -82,9 +92,7 @@ class CardState extends State<GSCard> {
                                 Spacer(),
                                 InkWell(
                                   child: Text("View More"),
-                                  onTap: () {
-                                    debugPrint("${widget.id}");
-                                  },
+                                  onTap: widget.viewPost,
                                 ),
                               ],
                             ),

@@ -19,7 +19,7 @@ class TestState extends State {
   @override
   Widget build(BuildContext bc) {
     return Scaffold(
-      body:GSUser(),
+      body:null,
     );
   }
 }

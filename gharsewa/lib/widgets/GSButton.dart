@@ -15,16 +15,20 @@ class GSButton extends StatefulWidget {
 class GSButtonState extends State<GSButton> {
   @override
   Widget build(BuildContext bc) {
-    return ElevatedButton(
-      onPressed: widget.onClick,
-
-      style: ElevatedButton.styleFrom(
-        backgroundColor: widget.buttonColor,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      ),
-      child: Text(
-        "${widget.buttonText}",
-        style: TextStyle(color: GSColors().white),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+      child: ElevatedButton(
+        onPressed: widget.onClick,
+      
+        style: ElevatedButton.styleFrom(
+          backgroundColor: widget.buttonColor,
+          padding: EdgeInsets.all(22),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        ),
+        child: Text(
+          "${widget.buttonText}",
+          style: TextStyle(color: GSColors().white,),
+        ),
       ),
     );
   }

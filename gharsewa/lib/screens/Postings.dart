@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gharsewa/screens/PostDetail.dart';
 
 import 'package:gharsewa/widgets/GSAppBar.dart';
 import 'package:gharsewa/widgets/GSButton.dart';
@@ -6,15 +7,15 @@ import 'package:gharsewa/widgets/GSListTile.dart';
 import 'package:gharsewa/widgets/GSTextField.dart';
 import 'package:gharsewa/widgets/GSCard.dart';
 
-class Listings extends StatefulWidget {
-  const Listings({super.key});
+class Postings extends StatefulWidget {
+  const Postings({super.key});
   @override
-  State<Listings> createState() {
-    return ListingState();
+  State<Postings> createState() {
+    return PostingState();
   }
 }
 
-class ListingState extends State<Listings> {
+class PostingState extends State<Postings> {
   @override
   Widget build(BuildContext bc) {
     return Scaffold(
@@ -28,6 +29,12 @@ class ListingState extends State<Listings> {
               desc: "All the description about the post",
               location: "Baneshwor, Kathmandu",
               img: "lib/assets/images/OliBaa.jpg",
+              viewPost: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>PostDetail(id: 1))
+              );
+              } 
             ),
             GSCard(
               id: 2,
@@ -35,6 +42,12 @@ class ListingState extends State<Listings> {
               desc: "All the description about the post",
               location: "Baneshwor, Kathmandu",
               img: "lib/assets/images/Prachanda.jpg",
+              viewPost: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>PostDetail(id: 2))
+              );
+              }
             ),
             GSCard(
               id: 3,
@@ -42,6 +55,12 @@ class ListingState extends State<Listings> {
               desc: "All the description about the post",
               location: "Baneshwor, Kathmandu",
               img: "lib/assets/images/SBD.jpg",
+              viewPost: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>PostDetail(id: 3))
+              );
+              } 
             ),
             GSCard(
               id: 4,
@@ -49,6 +68,12 @@ class ListingState extends State<Listings> {
               desc: "All the description about the post",
               location: "Baneshwor, Kathmandu",
               img: "lib/assets/images/Madhav.jpg",
+              viewPost: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>PostDetail(id: 4))
+              );
+              } 
             ),
             GSCard(
               id: 5,
@@ -56,6 +81,12 @@ class ListingState extends State<Listings> {
               desc: "All the description about the post",
               location: "Baneshwor, Kathmandu",
               img: "lib/assets/images/Rabi.jpg",
+              viewPost: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>PostDetail(id: 5))
+              );
+              } 
             ),
           ],
         ),
