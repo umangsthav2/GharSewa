@@ -19,7 +19,7 @@ class MainApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body:LoginScreen()),
+      home: Scaffold(body:TestScreen()),
     );
   }
 }
