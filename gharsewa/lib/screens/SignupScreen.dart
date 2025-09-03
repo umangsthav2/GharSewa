@@ -13,7 +13,6 @@ class SignupScreen extends StatefulWidget {
 class SignupState extends State<SignupScreen> {
   @override
   Widget build(BuildContext bc) {
-
     return Scaffold(
       backgroundColor: GSColors().offwhite,
       body:Center(
@@ -44,7 +43,6 @@ class SignupState extends State<SignupScreen> {
                   },
               ),
             ),
-
             Padding(padding: EdgeInsets.only(top: 20),
             child:InkWell(child: Text("Back to Login"),onTap: () {
               Navigator.pushReplacement(

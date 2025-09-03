@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:gharsewa/widgets/GSListTile.dart';
 
 class GSUser extends StatefulWidget {
-  const GSUser({super.key});
+  
+  final String? name;
+  final String? location;
+  
+  
+  const GSUser({super.key, this.name, this.location});
 
   @override
   State<GSUser> createState() {
@@ -25,10 +30,10 @@ class UserState extends State<GSUser> {
                   backgroundImage: AssetImage('lib/assets/images/user1.jpg'),
                   ),
                 Text(
-                  "Narendra Modi",
+                  "${widget.name}",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
                 ),
-                Text("Kapilwastu, Lumbini", style: TextStyle(fontSize: 22)),
+                Text("${widget.location}", style: TextStyle(fontSize: 22)),
                 Align(alignment: Alignment.centerLeft,
                 child:Padding(
                   padding:EdgeInsets.only(top:50, bottom:15),

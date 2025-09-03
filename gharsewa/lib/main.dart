@@ -5,6 +5,7 @@ import 'package:gharsewa/screens/LoginScreen.dart';
 import 'package:gharsewa/screens/PostDetail.dart';
 import 'package:gharsewa/screens/SplashScreen.dart';
 import 'package:gharsewa/screens/TestScreen.dart';
+import 'package:gharsewa/screens/DrawerSettings.dart';
 
 import 'package:gharsewa/themes/colors.dart';
 
@@ -19,7 +20,13 @@ class MainApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body:TestScreen()),
+      home: Scaffold(
+        appBar: AppBar(
+        backgroundColor: Colors.amber,
+      ),
+      drawer: UserProfile(),
+        body:TestScreen()
+        ),
     );
   }
 }
