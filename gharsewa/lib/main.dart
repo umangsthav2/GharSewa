@@ -8,6 +8,7 @@ import 'package:gharsewa/screens/TestScreen.dart';
 import 'package:gharsewa/screens/DrawerSettings.dart';
 
 import 'package:gharsewa/themes/colors.dart';
+import 'package:gharsewa/widgets/GSAppBar.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -20,13 +21,7 @@ class MainApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-        backgroundColor: Colors.amber,
-      ),
-      drawer: UserProfile(),
-        body:TestScreen()
-        ),
+      home: LoginScreen(),
     );
   }
 }

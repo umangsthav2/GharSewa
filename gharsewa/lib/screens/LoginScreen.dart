@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gharsewa/screens/Postings.dart';
 import 'package:gharsewa/screens/SignupScreen.dart';
-import 'package:gharsewa/widgets/GSCard.dart';
 import 'package:gharsewa/widgets/GSTextField.dart';
 
 import '../widgets/GSAppBar.dart';
 import '../widgets/GSButton.dart';
-import '../widgets/GSTextField.dart';
 
 import '../themes/colors.dart';
 
@@ -26,7 +24,7 @@ class LoginState extends State<LoginScreen> {
     final TextEditingController passwordValue = TextEditingController();
 
     return Scaffold(
-      // appBar: GSAppBar(),
+      appBar: GSAppBar(),
       backgroundColor: GSColors().offwhite,
       body: SingleChildScrollView(
         child: Center(
@@ -62,7 +60,7 @@ class LoginState extends State<LoginScreen> {
                 child: InkWell(
                   child: Text("Register Now"),
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => SignupScreen()),
                     );

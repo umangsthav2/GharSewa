@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gharsewa/screens/DrawerSettings.dart';
 import 'package:gharsewa/screens/PostDetail.dart';
 
 import 'package:gharsewa/widgets/GSAppBar.dart';
-import 'package:gharsewa/widgets/GSButton.dart';
-import 'package:gharsewa/widgets/GSListTile.dart';
-import 'package:gharsewa/widgets/GSTextField.dart';
 import 'package:gharsewa/widgets/GSCard.dart';
 
 class Postings extends StatefulWidget {
@@ -19,6 +17,8 @@ class PostingState extends State<Postings> {
   @override
   Widget build(BuildContext bc) {
     return Scaffold(
+      appBar: GSAppBar(),
+      drawer: UserProfile(),
       backgroundColor: Colors.black12,
       body: SingleChildScrollView(
         child: Column(
@@ -31,10 +31,10 @@ class PostingState extends State<Postings> {
               img: "lib/assets/images/OliBaa.jpg",
               viewPost: () {
                 Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>PostDetail(id: 1))
-              );
-              } 
+                  context,
+                  MaterialPageRoute(builder: (context) => PostDetail(id: 1)),
+                );
+              },
             ),
             GSCard(
               id: 2,
@@ -44,10 +44,10 @@ class PostingState extends State<Postings> {
               img: "lib/assets/images/Prachanda.jpg",
               viewPost: () {
                 Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>PostDetail(id: 2))
-              );
-              }
+                  context,
+                  MaterialPageRoute(builder: (context) => PostDetail(id: 2)),
+                );
+              },
             ),
             GSCard(
               id: 3,
@@ -57,10 +57,10 @@ class PostingState extends State<Postings> {
               img: "lib/assets/images/SBD.jpg",
               viewPost: () {
                 Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>PostDetail(id: 3))
-              );
-              } 
+                  context,
+                  MaterialPageRoute(builder: (context) => PostDetail(id: 3)),
+                );
+              },
             ),
             GSCard(
               id: 4,
@@ -70,10 +70,10 @@ class PostingState extends State<Postings> {
               img: "lib/assets/images/Madhav.jpg",
               viewPost: () {
                 Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>PostDetail(id: 4))
-              );
-              } 
+                  context,
+                  MaterialPageRoute(builder: (context) => PostDetail(id: 4)),
+                );
+              },
             ),
             GSCard(
               id: 5,
@@ -83,10 +83,10 @@ class PostingState extends State<Postings> {
               img: "lib/assets/images/Rabi.jpg",
               viewPost: () {
                 Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>PostDetail(id: 5))
-              );
-              } 
+                  context,
+                  MaterialPageRoute(builder: (context) => PostDetail(id: 5)),
+                );
+              },
             ),
           ],
         ),

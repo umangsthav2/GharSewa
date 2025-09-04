@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:gharsewa/widgets/GSAppBar.dart';
 import 'package:gharsewa/widgets/GSListTile.dart';
 import 'package:gharsewa/widgets/GSUser.dart';
 
@@ -23,6 +24,7 @@ class DetailState extends State<PostDetail> {
   @override
   Widget build(BuildContext bc) {
     return Scaffold(
+      appBar: GSAppBar(),
       body: Column(
         children: [
           CarouselSlider(
