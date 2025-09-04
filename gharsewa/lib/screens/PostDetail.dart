@@ -5,15 +5,9 @@ import 'package:gharsewa/widgets/GSListTile.dart';
 import 'package:gharsewa/widgets/GSUser.dart';
 
 class PostDetail extends StatefulWidget {
-  int id;
+  final int id;
 
-  final List<String> imgList = const [
-    'https://picsum.photos/id/1015/600/300',
-    'https://picsum.photos/id/1016/600/300',
-    'https://picsum.photos/id/1018/600/300',
-  ];
-
-  PostDetail({super.key, required this.id});
+  const PostDetail({super.key, required this.id});
   @override
   State<PostDetail> createState() {
     return DetailState();

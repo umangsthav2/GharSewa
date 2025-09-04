@@ -12,6 +12,8 @@ class SignupScreen extends StatefulWidget {
 }
 
 class SignupState extends State<SignupScreen> {
+  String? selectedGender;
+
   @override
   Widget build(BuildContext bc) {
     return Scaffold(
@@ -28,7 +30,20 @@ class SignupState extends State<SignupScreen> {
             ),
             const SizedBox(height: 10),
             GSTextField(placeholder: "Name (Text)", value: null),
-            GSTextField(placeholder: "Gender (Radio)", value: null),
+            // GSTextField(placeholder: "Gender (Radio)", value: null),
+            Column(children:[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                  Text("Male:"),
+                  Radio(value: "Male",groupValue:selectedGender,onChanged: (String? value){setState(() {selectedGender=value;debugPrint(selectedGender);});}),
+                  Text("Female:"),
+                  Radio(value: "Female",groupValue:selectedGender,onChanged: (String? value){setState(() {selectedGender=value;debugPrint(selectedGender);});}),
+                  Text("Others:"),
+                  Radio(value: "Others",groupValue:selectedGender,onChanged: (String? value){setState(() {selectedGender=value;debugPrint(selectedGender);});}),
+                ],)
+              ],
+            ),
             GSTextField(
               placeholder: "Date of Birth (Date Selection)",
               value: null,
