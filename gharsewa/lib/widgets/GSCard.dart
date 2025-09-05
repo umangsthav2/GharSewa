@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gharsewa/screens/LoginScreen.dart';
 
 import 'package:gharsewa/widgets/GSListTile.dart';
-import 'package:gharsewa/widgets/GSUser.dart';
+import 'package:gharsewa/screens/UserScreen.dart';
 
 class GSCard extends StatefulWidget {
   final String? title;
@@ -43,15 +43,15 @@ class CardState extends State<GSCard> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => GSUser() 
+                    builder: (context) => UserScreen() 
                   )
                 );
               },
             ),
                 Container(
                   width: double.infinity,
-                  height: 250,
-                  child: Image.network(fit: BoxFit.cover,"${widget.img}"),
+                  height: 200,
+                  child: Image.asset(fit: BoxFit.cover,"${widget.img}"),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(15),
@@ -72,7 +72,7 @@ class CardState extends State<GSCard> {
                                   "${widget.title}",
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 22,
+                                    fontSize: 20,
                                   ),
                                 ),
                               ],

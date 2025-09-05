@@ -22,7 +22,7 @@ class GSButtonState extends State<GSButton> {
       
         style: ElevatedButton.styleFrom(
           backgroundColor: widget.buttonColor,
-          padding: EdgeInsets.all(22),
+          padding: EdgeInsets.all(14),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
         child: Text(

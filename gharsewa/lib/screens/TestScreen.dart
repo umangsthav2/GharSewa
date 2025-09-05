@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gharsewa/screens/DrawerSettings.dart';
 import 'package:gharsewa/widgets/GSListTile.dart';
-import 'package:gharsewa/widgets/GSUser.dart';
+import 'package:gharsewa/screens/UserScreen.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -43,7 +43,7 @@ class TestState extends State {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => GSUser(
+                          builder: (context) => UserScreen(
                             name:"${item['name']}",
                             location:"${item['address']['street']}, ${item['address']['city']}",
                           )

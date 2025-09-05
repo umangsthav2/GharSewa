@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gharsewa/screens/DrawerSettings.dart';
 import 'package:gharsewa/screens/PostDetail.dart';
+import 'package:gharsewa/themes/colors.dart';
 
 import 'package:gharsewa/widgets/GSAppBar.dart';
 import 'package:gharsewa/widgets/GSCard.dart';
@@ -19,7 +20,7 @@ class PostingState extends State<Postings> {
     return Scaffold(
       appBar: GSAppBar(),
       drawer: UserProfile(),
-      backgroundColor: Colors.black12,
+      backgroundColor: GSColors().offwhite,
       body: SingleChildScrollView(
         child: Column(
           children: [

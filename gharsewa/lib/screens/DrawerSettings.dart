@@ -10,7 +10,7 @@ class ProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext bc) {
     return Container(
-      decoration: BoxDecoration(color: GSColors().green),
+      decoration: BoxDecoration(color: GSColors().yellow),
       width: 300,
       child: Column(
         children: [

@@ -32,7 +32,7 @@ class LoginState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset("lib/assets/images/gharsewa_logo.png", width: 125),
-              SizedBox(width: 150,),
+              SizedBox(width: 150),
               GSTextField(placeholder: "Email", value: emailValue),
               GSTextField(
                 placeholder: "Password",

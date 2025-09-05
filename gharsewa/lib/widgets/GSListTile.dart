@@ -19,14 +19,15 @@ class ListTileState extends State<GSListTile> {
       onTap: widget.onClick,
       child: ListTile(
         leading: CircleAvatar(
+          radius: 20,
           backgroundImage: AssetImage("${widget.img}"),
           backgroundColor: Colors.blue,
         ),
         title: Text(
           "${widget.name}",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
-        subtitle: Text("${widget.desc}"),
+        subtitle: Text("${widget.desc}", style: TextStyle(fontSize: 12)),
       ),
     );
   }
